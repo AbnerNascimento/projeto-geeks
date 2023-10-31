@@ -1,0 +1,61 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-poppins);
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  transition: all 0.7s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --main-color: #000002;
+  --text-color: #ffffff;
+  --bg-color: #10C4AE;
+  --big-font:4rem;
+  --h2-font:2.25rem;
+  --p-font:1.2rem;
+}
+/*------Barra de rolagem------*/
+html{
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-thumb{
+  background-color: var(--main-color);
+}
+
+/*-------------CORPO--------------*/
+body{
+  color:var(var(--text-color));
+  background: var(--bg-color);
+}
+
+.surgir-de-baixo-tailwind {
+  animation: surgirDeBaixo 1s ease-out;
+}
+
+@keyframes surgirDeBaixo {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.surgir-de-baixo {
+  animation: surgirDeBaixo 1s ease-out;
+}
